@@ -1,7 +1,8 @@
 const sliders = (slides, dir, prev, next, ) => {
 	let slideIndex = 1,
 		paused = false;
-	const items = document.querySelectorAll(slides);
+	const items = document.querySelectorAll(slides),
+			container = document.querySelector('.feedback');
 	
 	function showSlides(n) {
 		if (n > items.length) {
@@ -18,6 +19,8 @@ const sliders = (slides, dir, prev, next, ) => {
 		});
 
 		items[slideIndex - 1].style.display = 'block';
+
+		container.style.overflow = 'hidden';
 	}
 
 	showSlides(slideIndex);
