@@ -63,8 +63,14 @@ const forms = () => {
 
 			const formData = new FormData(item);
 			let api;
-			item.closest('.popup-design') || item.classList.contains('calc_form') ? api = path.designer : api = path.question;
+			item.closest('.popup-design') || item.classList.contains('calc_form') ? 
+			api = path.designer : api = path.question;
 			console.log(api);
+
+			let price = document.querySelector('.calc-price').textContent;
+			if (item.classList.contains('calc_form')) {
+				formData.append('price', price);
+			}
 
 			postData(api, formData)
 			.then(res => {

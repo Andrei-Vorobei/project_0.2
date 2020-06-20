@@ -1,24 +1,43 @@
 {
-    "styles": [
-        {
-            "src": "assets/img/styles-5.jpg",
-            "title": "Пастелью",
-            "link": "#pastel"
-        },
-        {
-            "src": "assets/img/styles-6.jpg",
-            "title": "Поп-арт",
-            "link": "#popart"
-        },
-        {
-            "src": "assets/img/styles-7.png",
-            "title": "Фотомозаика",
-            "link": "#mozaika"
-        },
-        {
-            "src": "assets/img/styles-8.jpg",
-            "title": "Шарж",
-            "link": "#sharj"
-        }
-    ]
+	"styles": [
+		{
+			"src": "assets/img/styles-5.jpg",
+			"title": "Пастелью",
+			"link": "#pastel"
+		},
+		{
+			"src": "assets/img/styles-6.jpg",
+			"title": "Поп-арт",
+			"link": "#popart"
+		},
+		{
+			"src": "assets/img/styles-7.png",
+			"title": "Фотомозаика",
+			"link": "#mozaika"
+		},
+		{
+			"src": "assets/img/styles-8.jpg",
+			"title": "Шарж",
+			"link": "#sharj"
+		}
+	],
+	"size": {
+		"Выберите размер картины": "",
+		"40x50": 500,
+		"50x70": 10000,
+		"70x70": 1500,
+		"70x100": 2000
+	},
+	"material": {
+		"Выберите материал картины": "",
+		"Fiber": 1,
+		"Flax": 1.2,
+		"Cotton": 1.5
+	},
+	"options": {
+		"Дополнительные услуги": "",
+		"art-gel": 1000,
+		"Expres": 2000,
+		"delivery": 500
+	}
 }

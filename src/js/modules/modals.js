@@ -81,7 +81,7 @@ const modals = () => {
 			let display;
 
 			document.querySelectorAll('[data-modal').forEach(item => {
-				if(getComputedStyle(item).display != 'none') {
+				if (getComputedStyle(item).display != 'none') {
 					display = 'block';
 				}
 			});
