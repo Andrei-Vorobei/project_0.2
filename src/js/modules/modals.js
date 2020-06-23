@@ -25,7 +25,7 @@ const modals = () => {
 				giftTrigger = document.querySelector('.fixed-gift');
 
 		trigger.forEach(item => {
-			let event = item.addEventListener('click', (e) => {
+			item.addEventListener('click', (e) => {
 				if (e.target) {
 					e.preventDefault();
 				}
