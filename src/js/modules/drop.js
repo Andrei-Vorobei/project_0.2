@@ -54,6 +54,18 @@ const drop = () => {
 	fileInputs.forEach(input => {
 		input.addEventListener('drop', (e) => {
 			input.files = e.dataTransfer.files;
+			if (input.getAttribute('data-upload')) {
+				e.preventDefault();
+				e.stopPropagation();
+				let formData = new FormData();
+				[...input.files].forEach(file => {
+					formData.append('image', file);
+					postData('assets/server.php', formData)
+						.then(res => {
+							console.log(res);
+						});
+				});
+			}
 
 			let dots;
 			const arr = input.files[0].name.split('.');

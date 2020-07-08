@@ -4546,6 +4546,42 @@ var calc = function calc(size, material, options, promocode, result) {
     }
   };
 
+  function createOptions(response, target) {
+    for (var key in response) {
+      var option = document.createElement('option');
+      option.innerText = key;
+      option.value = response[key];
+      target.appendChild(option);
+    }
+  }
+
+  sizeBlock.addEventListener('click', function () {
+    var selectName = sizeBlock.id;
+    sizeBlock.innerHTML = '';
+    Object(_services_requests__WEBPACK_IMPORTED_MODULE_0__["getResource"])("http://localhost:3000/".concat(selectName)).then(function (res) {
+      return createOptions(res, sizeBlock);
+    });
+  }, {
+    'once': true
+  });
+  materialBlock.addEventListener('click', function () {
+    var selectName = materialBlock.id;
+    materialBlock.innerHTML = '';
+    Object(_services_requests__WEBPACK_IMPORTED_MODULE_0__["getResource"])("http://localhost:3000/".concat(selectName)).then(function (res) {
+      return createOptions(res, materialBlock);
+    });
+  }, {
+    'once': true
+  });
+  optionsBlock.addEventListener('click', function () {
+    var selectName = optionsBlock.id;
+    optionsBlock.innerHTML = '';
+    Object(_services_requests__WEBPACK_IMPORTED_MODULE_0__["getResource"])("http://localhost:3000/".concat(selectName)).then(function (res) {
+      return createOptions(res, optionsBlock);
+    });
+  }, {
+    'once': true
+  });
   sizeBlock.addEventListener('change', calcFunc);
   materialBlock.addEventListener('change', calcFunc);
   optionsBlock.addEventListener('change', calcFunc);
@@ -4607,6 +4643,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _services_requests__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/requests */ "./src/js/services/requests.js");
+
 
 
 
@@ -4963,7 +5001,7 @@ var modals = function modals() {
         windows = document.querySelectorAll('[data-modal]'),
         giftTrigger = document.querySelector('.fixed-gift');
     trigger.forEach(function (item) {
-      var event = item.addEventListener('click', function (e) {
+      item.addEventListener('click', function (e) {
         if (e.target) {
           e.preventDefault();
         }

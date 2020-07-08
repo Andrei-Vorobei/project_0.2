@@ -56,7 +56,7 @@ const sliders = (slides, dir, prev, next, ) => {
 				items[slideIndex - 1].classList.remove('slideInLeft');
 				items[slideIndex - 1].classList.add('slideInRight');
 			}
-		}, 5000);
+		}, 10000);
 	}
 	activateAnimation();
 

@@ -84,7 +84,7 @@
 					<div class=file_upload>
 						<button type=button>Загрузить фотографию</button>
 						<div>Файл не выбран</div>
-						<input type=file name=upload>
+						<input type=file name=upload data-upload>
 					</div>
 					<p class=email>E-mail: <a href=mailto:info@kartiny.art>info@kartiny.art</a></p>
 				</div>
@@ -209,7 +209,7 @@
 						<div class=file_upload>
 							<button type=button>Загрузить фотографию</button>
 							<div>Файл не выбран</div>
-							<input type=file name=upload>
+							<input type=file name=upload multiple accept="image/*">
 						</div>
 						<select id=size>
 							<option value>Выберите размер картины</option>
@@ -220,14 +220,9 @@
 						</select>
 						<select id=material>
 							<option value>Выберите материал картины</option>
-							<option value="1"
-								title="Изящный, позволяет легко создавать текстуру, подходит для декоративных картин маслом.">
-								Холст из волокна</option>
-							<option value="1.2"
-								title="Достаточно грубый и создает ощущение реальности, подходит для классических пейзажей, натюрмортов и портретов.">
-								Льняной холст</option>
-							<option value="1.5" title="Изящный, подходит для всех типов реалистичных портретов.">Холст из
-								натурального хлопка</option>
+							<option value="1" title="Изящный, позволяет легко создавать текстуру, подходит для декоративных картин маслом.">Холст из волокна</option>
+							<option value="1.2" title="Достаточно грубый и создает ощущение реальности, подходит для классических пейзажей, натюрмортов и портретов.">Льняной холст</option>
+							<option value="1.5" title="Изящный, подходит для всех типов реалистичных портретов.">Холст из натурального хлопка</option>
 						</select>
 						<select id=options>
 							<option value="0">Дополнительные услуги</option>
